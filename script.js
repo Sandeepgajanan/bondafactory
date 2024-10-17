@@ -1,6 +1,10 @@
-
 document.addEventListener('DOMContentLoaded', function () {
+  const buttons = document.querySelectorAll(".toggle-answer");
+  const bottle = document.querySelector("#bottle");
+
+
   const scroll = () => {
+    gsap.registerPlugin(ScrollTrigger);
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("#main"),
       smooth: true,
@@ -33,13 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const sheryAnim = () => {
     Shery.mouseFollower({});
-    Shery.imageMasker(".card", {
-      mouseFollower: true,
-      text: "Buy",
+    Shery.makeMagnet("a", {
       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
       duration: 1,
     });
-    Shery.makeMagnet("h2,a", {
+    Shery.makeMagnet(".card h1", {
       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
       duration: 1,
     });
@@ -80,49 +82,37 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   const ganim = () => {
-    const buttons = document.querySelectorAll(".toggle-answer");
-    const bottle = document.querySelector("#bottle");
     const tl = gsap.timeline();
+    tl.to(".loader-content", { opacity: 1, duration: 0.5 })
+      .to(".progress-bar", { width: "100%", duration: 2 })
+      .to(".loader", { y: -300, opacity: 0, duration: 1 });
 
     tl.to(bottle, {
-      y: "90%",
-      rotate: 360,
       scrollTrigger: {
-        trigger: ".section1",
+        trigger: bottle,
         scroller: "#main",
-        start: "50% 50%",
-        end: "130% 50%",
+        pin: true,
+        start: "10% 0%",
+        end: "top -205%",
         scrub: 1,
       },
-    }).from(bottle, { y: "90%", rotate: 0 })
-
-      .to(bottle, {
-        y:590,
-        height: "35vh",
-        rotate: 360,
-        zIndex: 100,
-        scrollTrigger: {
-          trigger: ".section3",
-          scroller: "#main",
-          start: "50% 50%",
-          end: "150% 50%",
-          scrub: 1,
-        },
-      });
-
+      rotate: 0,
+      scale: 0.3,
+      zIndex: 100
+    })
     tl.to(".scroll", {
-      x: "-100%",
+      x: "-90%",
       scrollTrigger: {
         scroller: "#main",
         trigger: ".section5",
-        start:  "top 0",
+        start: "top 0",
         end: "top -100%",
         scrub: 1,
         pin: true,
       },
     });
 
-    tl.to(".container", {
+    gsap.to(".container", {
       y: "-100%",
       duration: 10,
       repeat: -1,
