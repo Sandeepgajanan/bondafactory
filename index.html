@@ -1,242 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bonda Factory</title>
+    <link rel="icon" href="img/icon.png" />
+    <link
+      rel="preload"
+      href="./font/druck.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="./font/dance.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bonda Factory</title>
-  <link rel="icon" href="img/icon.png">
-  <link rel="preload" href="font/druck.ttf" as="font" type="font/ttf" crossorigin="anonymous">
-  <link rel="preload" href="font/dance.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <!-- locomotive css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- shery css  -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-  <!-- locomotive css  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
-  <!-- shery css  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <aside>
-    <div class="container">
-      <div class="elem">
-        <img src="./img/1.jpg" alt="Image 1" />
+  <body>
+    <aside>
+      <div class="container">
+        <div class="elem">
+          <img src="./img/1.jpg" alt="Image 1" />
+        </div>
+        <div class="elem">
+          <img src="./img/2.jpg" alt="Image 2" />
+        </div>
+        <div class="elem">
+          <img src="./img/3.jpg" alt="Image 3" />
+        </div>
+        <div class="elem">
+          <img src="./img/4.jpg" alt="Image 4" />
+        </div>
+        <div class="elem">
+          <img src="./img/5.jpg" alt="Image 5" />
+        </div>
+        <div class="elem">
+          <img src="./img/6.jpg" alt="Image 6" />
+        </div>
       </div>
-      <div class="elem">
-        <img src="./img/2.jpg" alt="Image 2" />
+      <div class="container">
+        <div class="elem">
+          <img src="./img/1.jpg" alt="Image 1" />
+        </div>
+        <div class="elem">
+          <img src="./img/2.jpg" alt="Image 2" />
+        </div>
+        <div class="elem">
+          <img src="./img/3.jpg" alt="Image 3" />
+        </div>
+        <div class="elem">
+          <img src="./img/4.jpg" alt="Image 4" />
+        </div>
+        <div class="elem">
+          <img src="./img/5.jpg" alt="Image 5" />
+        </div>
+        <div class="elem">
+          <img src="./img/6.jpg" alt="Image 6" />
+        </div>
       </div>
-      <div class="elem">
-        <img src="./img/3.jpg" alt="Image 3" />
-      </div>
-      <div class="elem">
-        <img src="./img/4.jpg" alt="Image 4" />
-      </div>
-      <div class="elem">
-        <img src="./img/5.jpg" alt="Image 5" />
-      </div>
-      <div class="elem">
-        <img src="./img/6.jpg" alt="Image 6" />
-      </div>
-    </div>
-    <div class="container">
-      <div class="elem">
-        <img src="./img/1.jpg" alt="Image 1" />
-      </div>
-      <div class="elem">
-        <img src="./img/2.jpg" alt="Image 2" />
-      </div>
-      <div class="elem">
-        <img src="./img/3.jpg" alt="Image 3" />
-      </div>
-      <div class="elem">
-        <img src="./img/4.jpg" alt="Image 4" />
-      </div>
-      <div class="elem">
-        <img src="./img/5.jpg" alt="Image 5" />
-      </div>
-      <div class="elem">
-        <img src="./img/6.jpg" alt="Image 6" />
-      </div>
-    </div>
-  </aside>
-  <main id="main">
-
-    <section class="section1">
-      <span>Buy</span>
-      <h1>Bonda <br />Factory</h1>
-      <img src="./img/bottle.png" id="bottle" alt="Bottle" />
-    </section>
-
-    <section class="section3">
-      <div id="heroleft">
-        <h1>Bonda <br> factory</h1>
-        <p>Known for its delicious, crispy bondas. This popular eatery offers a refreshing experience with coconut water
-          and a variety of ice creams, attracting local food enthusiasts.</p>
+    </aside>
+    <main id="main">
+      <section class="section1">
         <span>Buy</span>
-      </div>
-      <div id="heroright"><img src="./img/bondafactory.jpg" class="img" alt="Bonda Factory"></div>
-    </section>
+        <h1>Bonda <br />Factory</h1>
+        <img src="./img/bottle.png" id="bottle" alt="Bottle" />
+      </section>
 
-    <section class="section4">
-      <h2>Menu</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="imgdiv">
-            <img src="./img/pinacolada.png" id="pinacolada" alt="Pinacolada">
-          </div>
-          <div class="textdiv">
-            <h1>Pinacolada</h1>
-          </div>
+      <section class="section3">
+        <div id="heroleft">
+          <h1>
+            Bonda <br />
+            factory
+          </h1>
+          <p>
+            Known for its delicious, crispy bondas. This popular eatery offers a
+            refreshing experience with coconut water and a variety of ice
+            creams, attracting local food enthusiasts.
+          </p>
+          <span>Buy</span>
         </div>
-        <div class="card">
-          <div class="imgdiv">
-            <img src="./img/water.png" id="water" class="img1" alt="Coconut Water">
-          </div>
-          <div class="textdiv">
-            <h1>Bonda</h1> 
-          </div>
+        <div id="heroright">
+          <img src="./img/bondafactory.jpg" class="img" alt="Bonda Factory" />
         </div>
-        <div class="card">
-          <div class="imgdiv">
-          
-          </div>
-          <div class="textdiv">
-            <h1>Coconut Water</h1>
-          </div>
-        </div>
-        <div class="card">
-          <div class="imgdiv">
-            <img src="./img/ice.png" id="ice" alt="Ice Cream Scoop">
-          </div>
-          <div class="textdiv">
-            <h1>Ice Cream Scoop</h1>
-          </div>
-        </div>
-        <div class="card">
-          <div class="imgdiv">
-            <img src="./img/family.png" id="family" alt="Family Pack">
-          </div>
-          <div class="textdiv">
-            <h1>Family Pack</h1>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-
-    <div class="section5">
-      <div class="scroll">
-        <img src="./img/ing.png" alt="Ingredients" id="down">
-        <h2>Ingredients</h2>
-
-        <img src="./img/Asset 1.png" alt="Milk" id="first">
-        <h1 id="firsttext">Milk</h1>
-        <img src="./img/Asset 2.png" alt="Fruits" id="second">
-        <h1 id="secondtext">Fruits</h1>
-        <img src="./img/Asset 3.png" alt="Sugar" id="three">
-        <h1 id="thirdtext">Sugar</h1>
-      </div>
-    </div>
-
-    <section class="section6">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-container">
-        <div class="faq">
-          <div class="question">
-            <h3>What is Bonda Factory?</h3>
-            <button class="toggle-answer" aria-label="Toggle answer">+</button>
+      <section class="section4">
+        <h2>Menu</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="imgdiv">
+              <img
+                src="./img/pinacolada.png"
+                id="pinacolada"
+                alt="Pinacolada"
+              />
+            </div>
+            <div class="textdiv">
+              <h1>Pinacolada</h1>
+            </div>
           </div>
-          <div class="answer" id="ans2">
-            <p>
-              Bonda Factory by Naturals Ice Cream in Mangalore sells
-              affordable tender coconut water and coconut-based ice creams,
-              turning a byproduct into popular and sustainable offerings.
-            </p>
+          <div class="card">
+            <div class="imgdiv">
+              <img
+                src="./img/water.png"
+                id="water"
+                class="img1"
+                alt="Coconut Water"
+              />
+            </div>
+            <div class="textdiv">
+              <h1>Bonda</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgdiv"></div>
+            <div class="textdiv">
+              <h1>Coconut Water</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgdiv">
+              <img src="./img/ice.png" id="ice" alt="Ice Cream Scoop" />
+            </div>
+            <div class="textdiv">
+              <h1>Ice Cream Scoop</h1>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgdiv">
+              <img src="./img/family.png" id="family" alt="Family Pack" />
+            </div>
+            <div class="textdiv">
+              <h1>Family Pack</h1>
+            </div>
           </div>
         </div>
-        <div class="faq">
-          <div class="question">
-            <h3>Which flavour is best in ice cream?</h3>
-            <button class="toggle-answer" aria-label="Toggle answer">+</button>
-          </div>
-          <div class="answer" id="ans1">
-            <p>
-              Some of the best and most popular flavours at Naturals Ice Cream
-              include Tender Coconut, Mango, Sitaphal, Roasted Almond, and
-              Kesar Pista.
-            </p>
-          </div>
-        </div>
-        <div class="faq">
-          <div class="question">
-            <h3>Where is Bonda Factory located?</h3>
-            <button class="toggle-answer" aria-label="Toggle answer">+</button>
-          </div>
-          <div class="answer" id="ans2">
-            <p>
-              Bonda Factory by Naturals Ice Cream is located in Mangalore, Adyar, Karnataka 575007
-            </p>
-          </div>
+      </section>
+
+      <div class="section5">
+        <div class="scroll">
+          <img src="./img/ing.png" alt="Ingredients" id="down" />
+          <h2>Ingredients</h2>
+
+          <img src="./img/Asset 1.png" alt="Milk" id="first" />
+          <h1 id="firsttext">Milk</h1>
+          <img src="./img/Asset 2.png" alt="Fruits" id="second" />
+          <h1 id="secondtext">Fruits</h1>
+          <img src="./img/Asset 3.png" alt="Sugar" id="three" />
+          <h1 id="thirdtext">Sugar</h1>
         </div>
       </div>
-    </section>
 
-
-    <footer class="footer-section">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-
-      <div class="footer-content">
-        <div class="footer-left">
-          <h3>Bonda Factory</h3>
-          <p>Delicious coconut treats and ice creams</p>
+      <section class="section6">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq">
+            <div class="question">
+              <h3>What is Bonda Factory?</h3>
+              <button class="toggle-answer" aria-label="Toggle answer">
+                +
+              </button>
+            </div>
+            <div class="answer" id="ans2">
+              <p>
+                Bonda Factory by Naturals Ice Cream in Mangalore sells
+                affordable tender coconut water and coconut-based ice creams,
+                turning a byproduct into popular and sustainable offerings.
+              </p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="question">
+              <h3>Which flavour is best in ice cream?</h3>
+              <button class="toggle-answer" aria-label="Toggle answer">
+                +
+              </button>
+            </div>
+            <div class="answer" id="ans1">
+              <p>
+                Some of the best and most popular flavours at Naturals Ice Cream
+                include Tender Coconut, Mango, Sitaphal, Roasted Almond, and
+                Kesar Pista.
+              </p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="question">
+              <h3>Where is Bonda Factory located?</h3>
+              <button class="toggle-answer" aria-label="Toggle answer">
+                +
+              </button>
+            </div>
+            <div class="answer" id="ans2">
+              <p>
+                Bonda Factory by Naturals Ice Cream is located in Mangalore,
+                Adyar, Karnataka 575007
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="footer-right">
-          <a href="#" aria-label="Instagram">
-            <img src="./img/insta.png" alt="Instagram">
-          </a>
-          <a href="#" aria-label="Facebook">
-            <img src="./img/fb.png" alt="Facebook">
-          </a>
-          <a href="#" aria-label="Email">
-            <img src="./img/email.png" alt="Email">
-          </a>
-          <a href="#" aria-label="Twitter">
-            <img src="./img/twitter.png" alt="Twitter">
-          </a>
+      </section>
+
+      <footer class="footer-section">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+
+        <div class="footer-content">
+          <div class="footer-left">
+            <h3>Bonda Factory</h3>
+            <p>Delicious coconut treats and ice creams</p>
+          </div>
+          <div class="footer-right">
+            <a href="#" aria-label="Instagram">
+              <img src="./img/insta.png" alt="Instagram" />
+            </a>
+            <a href="#" aria-label="Facebook">
+              <img src="./img/fb.png" alt="Facebook" />
+            </a>
+            <a href="#" aria-label="Email">
+              <img src="./img/email.png" alt="Email" />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img src="./img/twitter.png" alt="Twitter" />
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Crafted with ❤️ by <a href="">Sandeep Gajanan</a></p>
-      </div>
-    </footer>
+        <div class="footer-bottom">
+          <p>Crafted with ❤️ by <a href="">Sandeep Gajanan</a></p>
+        </div>
+      </footer>
+    </main>
+    <!-- locomotive js  -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
 
-  </main>
-  <!-- locomotive js  -->
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!-- gsap cdn  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- gsap cdn  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- scrolltrigger cdn  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- scrolltrigger cdn  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
-    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Three JS cdn  -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"
+      integrity="sha512-vnmn/Qqn6aG0POAc9mIGzjq0IybrvxJXYDafNvp9JSnDGxeF3pbkSqLvf+YGd5ku63pT7sa/jxHn7/d0mU8+tA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-  <!-- Three JS cdn  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- controlKit for debugging -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
 
-  <!-- controlKit for debugging -->
-  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <!-- Shery JS cdn  -->
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
 
-  <!-- Shery JS cdn  -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.js"></script>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
