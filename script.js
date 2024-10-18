@@ -87,7 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const tl = gsap.timeline();
     tl.to(".loader-content", { opacity: 1, duration: 0.5 })
       .to(".progress-bar", { width: "100%", duration: 2 })
-      .to(".loader", { y: -300, opacity: 0, duration: 1 });
+      .to(".loader", { y: -300, opacity: 0, duration: 1 })
+      .to(".loader", { display: "none" });
 
     if (window.innerWidth > 480) {
       tl.to(bottle, {
