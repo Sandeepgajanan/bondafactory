@@ -2,12 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll(".toggle-answer");
   const bottle = document.querySelector("#bottle");
 
-
   const scroll = () => {
     gsap.registerPlugin(ScrollTrigger);
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("#main"),
       smooth: true,
+      smartphone: {
+        smooth: true,
+      },
     });
 
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -87,30 +89,32 @@ document.addEventListener('DOMContentLoaded', function () {
       .to(".progress-bar", { width: "100%", duration: 2 })
       .to(".loader", { y: -300, opacity: 0, duration: 1 });
 
-    tl.to(bottle, {
-      scrollTrigger: {
-        trigger: bottle,
-        scroller: "#main",
-        pin: true,
-        start: "10% 0%",
-        end: "top -205%",
-        scrub: 1,
-      },
-      rotate: 0,
-      scale: 0.3,
-      zIndex: 100
-    })
-    tl.to(".scroll", {
-      x: "-90%",
-      scrollTrigger: {
-        scroller: "#main",
-        trigger: ".section5",
-        start: "top 0",
-        end: "top -100%",
-        scrub: 1,
-        pin: true,
-      },
-    });
+    if (window.innerWidth > 480) {
+      tl.to(bottle, {
+        scrollTrigger: {
+          trigger: bottle,
+          scroller: "#main",
+          pin: true,
+          start: "10% 0%",
+          end: "top -205%",
+          scrub: 1,
+        },
+        rotate: 0,
+        scale: 0.3,
+        zIndex: 100
+      });
+      tl.to(".scroll", {
+        transform: "translateX(-90%)",
+        scrollTrigger: {
+          scroller: "#main",
+          trigger: ".section5",
+          start: "top 0",
+          end: "top -100%",
+          scrub: 1,
+          pin: true,
+        },
+      });
+    }
 
     gsap.to(".container", {
       y: "-100%",

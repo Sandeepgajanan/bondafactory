@@ -10,13 +10,22 @@
   font-display: swap;
 }
 
+::-moz-selection {
+  -moz-user-select: none;
+  user-select: none;
+}
+
 ::selection {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "g";
 }
@@ -28,18 +37,25 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
 .loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color:black;
+  background-color: black;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  z-index: 9999;  
+  z-index: 9999;
 
 }
 
@@ -89,6 +105,7 @@ body {
   background-color: #4CAF50;
 
 }
+
 aside {
   font-style: italic;
   background-color: #71717a83;
@@ -102,9 +119,18 @@ aside {
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -119,7 +145,9 @@ aside {
 .elem img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: bottom;
   object-position: bottom;
 }
 
@@ -128,8 +156,14 @@ section {
   margin-left: 10vw;
   height: 100vh;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
 }
@@ -172,6 +206,8 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(10deg);
+  -ms-transform: translate(-50%, -50%) rotate(10deg);
   transform: translate(-50%, -50%) rotate(10deg);
   height: 100vh;
 }
@@ -227,11 +263,16 @@ section {
 #heroright img {
   width: 100%;
   height: 30vw;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
 .section4 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 
 }
@@ -243,9 +284,12 @@ section {
 }
 
 .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 3vw;
   gap: 0.4vw;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -256,8 +300,15 @@ section {
 
   border-radius: 1vw;
   padding: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -267,21 +318,34 @@ section {
   border-bottom: 0.20833vw solid #dadada;
   background-color: rgba(245, 245, 245, 0.767);
   border-radius: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .cards .card .imgdiv img {
   width: 100%;
   margin-bottom: 1vw;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
 .cards .card #pinacolada {
   width: 10vw;
   margin-right: 2vw;
+}
+
+.cards .card #magicbottle {
+  width: 9vw;
+  display: none;
 }
 
 .cards .card #ice {
@@ -306,8 +370,6 @@ section {
 /* section5 */
 .section5 {
   background-color: goldenrod;
-  width: 88.75vw;
-  margin-left: 10vw;
   overflow: hidden;
 }
 
@@ -315,8 +377,14 @@ section {
   width: 100%;
   height: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -382,11 +450,20 @@ section {
 
 /* section6-faq */
 .section6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: start;
   padding: 3vw 0;
   text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -397,9 +474,18 @@ section {
 }
 
 .section6 .faq-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   padding: 1vw 3vw;
@@ -408,19 +494,30 @@ section {
 
 .faq {
   border-radius: 2.5vw;
+  -webkit-box-shadow: 0 1.25vw 3.125vw rgba(0, 0, 0, 0.1);
   box-shadow: 0 1.25vw 3.125vw rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   width: 100%;
 }
 
 .faq:hover {
+  -webkit-transform: translateY(-1.04167vw);
+  -ms-transform: translateY(-1.04167vw);
   transform: translateY(-1.04167vw);
 }
 
 .faq .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: #ffeb3b;
   padding: 0.5vw 3vw;
@@ -438,7 +535,11 @@ section {
   font-size: 2.88vw;
   cursor: pointer;
   color: #333;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .faq .answer {
@@ -454,6 +555,8 @@ section {
 }
 
 .faq.open .question button {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
@@ -466,13 +569,24 @@ section {
   border-top: 0.20833vw solid #dadada6b;
   text-align: center;
   padding: 1vw 3vw 1vw 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1vw;
 }
@@ -487,7 +601,11 @@ section {
 }
 
 .footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 0.5vw;
 }
@@ -504,7 +622,9 @@ section {
 
 .footer-right img {
   width: 2vw;
+  -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
 }
 
@@ -538,4 +658,251 @@ section {
   background-color: #63b3ed;
   bottom: 25%;
   right: 33%;
+}
+
+@media screen and (min-width:320px) and (max-width: 480px) {
+
+  .loader-text h2 {
+    font-size: 10vw;
+  }
+
+  .loader-text p {
+    font-size: 6vw;
+  }
+
+  aside {
+    padding: 1vw;
+    width: 15vw;
+  }
+
+  .elem {
+    width: 13vw;
+    height: 15vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 12vw;
+  }
+
+  section {
+    width: 85.75vw;
+    margin-left: 15vw;
+  }
+
+  .section1 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 5vw;
+  }
+
+  .section1 .buy {
+    padding: 2vw 5vw;
+    font-size: 5vw;
+    border-radius: 2vw;
+    margin: 2vw;
+
+  }
+
+  .section1 h1 {
+    margin: 28vw 0;
+    font-size: 28vw;
+    line-height: 23vw;
+  }
+
+  .section1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(10deg);
+    -ms-transform: translate(-50%, -50%) rotate(10deg);
+    transform: translate(-50%, -50%) rotate(10deg);
+    height: 50vh;
+  }
+
+  .section3 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 3vw;
+  }
+
+  #heroleft {
+    width: 55vw;
+    height: 100%;
+  }
+
+  #heroleft h1 {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+
+  #heroleft p {
+    font-size: 3vw;
+    margin: 2vw 0;
+    width: 80%;
+    opacity: 0.8;
+  }
+
+  #heroleft span {
+    padding: 1vw 3.5vw;
+    font-size: 2vw;
+    border-radius: 2vw;
+
+
+  }
+
+  #heroright {
+    width: 40vw;
+    margin-left: 20vw;
+  }
+
+  #heroright img {
+    height: 44vw;
+  }
+
+  .section4 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 3vw;
+
+  }
+
+  .section4 h2 {
+    font-size: 10vw;
+  }
+
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1vw;
+    width: 100%;
+
+  }
+
+  .cards .card {
+    width: 100%;
+    height: 50vw;
+    border-radius: 2vw;
+    padding: 2vw;
+
+  }
+
+  .cards .card .imgdiv {
+    height: 30vw;
+    padding: 1vw;
+  }
+
+  .cards .card .imgdiv img {
+    width: 0;
+  }
+
+  .cards .card #pinacolada {
+    width: 30vw;
+    margin-right: 4vw;
+  }
+
+  .cards .card #magicbottle {
+    width: 23vw;
+    display: block;
+  }
+
+  .cards .card #water {
+    width: 36vw;
+  }
+
+  .cards .card #ice {
+    width: 28vw;
+  }
+
+  .cards .card #family {
+    width: 38vw;
+  }
+
+  .cards .card .textdiv {
+    padding: 1vw;
+  }
+
+  .cards .card .textdiv h1 {
+    font-size: 7vw;
+  }
+
+  /* section5 */
+  .section5 {
+    width: 85.75vw;
+    margin-left: 15vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: auto;
+  }
+
+  .section5 .scroll #firsttext {
+    left: 92%;
+  }
+
+  .section5 .scroll #secondtext {
+    left: 110%;
+  }
+
+  .section5 .scroll #thirdtext {
+    left: 130%;
+  }
+
+  /* section6-faq */
+  .section6 {
+    padding: 8vw 0;
+
+  }
+
+  .section6 h2 {
+    font-size: 7vw;
+  }
+
+  .faq .question {
+    padding: 3vw;
+  }
+
+  .faq .question h3 {
+    font-size: 5vw;
+
+  }
+
+  .faq .question button {
+    font-size: 5vw;
+  }
+
+  .faq .answer {
+    padding: 3vw;
+    font-size: 4vw;
+
+  }
+
+  .footer-section {
+    width: 85.75vw;
+    margin-left: 15vw;
+    padding: 3vw;
+  }
+
+  .footer-left h3 {
+    font-size: 5vw;
+  }
+
+  .footer-left p {
+    font-size: 2.6vw;
+  }
+
+  .footer-right {
+    gap: 0.8vw;
+  }
+
+  .footer-bottom p {
+    font-size: 3vw;
+  }
+
+  .footer-right img {
+    width: 3vw;
+  }
 }
