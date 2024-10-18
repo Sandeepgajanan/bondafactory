@@ -149,6 +149,7 @@ aside {
   object-fit: cover;
   -o-object-position: bottom;
   object-position: bottom;
+
 }
 
 section {
@@ -345,15 +346,18 @@ section {
 
 .cards .card #magicbottle {
   width: 9vw;
+  mix-blend-mode: multiply;
   display: none;
 }
 
 .cards .card #ice {
   width: 8.7vw;
+  mix-blend-mode: multiply;
 }
 
 .cards .card #family {
   width: 15vw;
+  mix-blend-mode: multiply;
 }
 
 .cards .card .textdiv {
@@ -388,9 +392,10 @@ section {
   justify-content: space-between;
 }
 
-.section5 .scroll #down {
-  height: 20vw;
+.section5 .scroll>img {
+  height: 23vw;
   margin: 2vw;
+
 }
 
 .section5 .scroll h2 {
@@ -402,15 +407,16 @@ section {
 }
 
 .section5 .scroll #first {
-  height: 15vw;
   position: relative;
-  margin-top: -16vw;
 }
 
-.section5 .scroll #firsttext {
+#first h1 {
   position: absolute;
-  top: 25%;
-  left: 89%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.856);
   text-transform: uppercase;
   z-index: 1;
@@ -418,15 +424,18 @@ section {
 }
 
 .section5 .scroll #second {
-  height: 15vw;
   position: relative;
   margin-top: 20vw;
 }
 
-.section5 .scroll #secondtext {
+
+#second h1 {
   position: absolute;
-  left: 107%;
-  bottom: 18%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.856);
   text-transform: uppercase;
   z-index: 1;
@@ -434,15 +443,18 @@ section {
 }
 
 .section5 .scroll #three {
-  height: 15vw;
   position: relative;
+  margin-top: -10vw;
 }
 
-.section5 .scroll #thirdtext {
+#three h1 {
   position: absolute;
   color: rgba(255, 255, 255, 0.856);
-  left: 126%;
-  top: 45%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-transform: uppercase;
   z-index: 1;
   font-size: 3.84vw;
@@ -839,16 +851,8 @@ section {
     overflow-x: auto;
   }
 
-  .section5 .scroll #firsttext {
-    left: 92%;
-  }
-
-  .section5 .scroll #secondtext {
-    left: 110%;
-  }
-
-  .section5 .scroll #thirdtext {
-    left: 130%;
+  .section5::-webkit-scrollbar {
+    display: none;
   }
 
   /* section6-faq */

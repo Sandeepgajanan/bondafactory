@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const ganim = () => {
     const tl = gsap.timeline();
-    tl.to(".loader-content", { opacity: 1, duration: 0.5 })
-      .to(".progress-bar", { width: "100%", duration: 2 })
+    tl.to(".loader-content", { opacity: 1, duration: 1 })
+      .to(".progress-bar", { width: "100%", duration: 3 })
       .to(".loader", { y: -300, opacity: 0, duration: 1 })
       .to(".loader", { display: "none" });
 
